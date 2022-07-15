@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Menu Bar on Right Click</title>
     <style>
       * {
         padding: 0;
@@ -36,17 +36,16 @@
   </head>
   <body>
     <script>
+	/* 
+		takes x,y coordinates of the top-left corner of 
+		the box that is going to be created!
+	*/
       function createElement(x, y) {
         const takeWrapper = document.querySelector(".wrapper");
-        if (takeWrapper) {
-          document.body.removeChild(takeWrapper);
-        }
-        if (x > innerWidth - 300) {
-          x -= 300;
-        }
-        if (y > innerHeight - 400) {
-          y -= 400;
-        }
+        if (takeWrapper) document.body.removeChild(takeWrapper);
+  
+        if (x > innerWidth - 300) x -= 300;
+        if (y > innerHeight - 400) y -= 400;
         const wrapper = document.createElement("div");
         wrapper.classList.add("wrapper");
 
